@@ -140,6 +140,12 @@ isAlpha(string $str, bool $includeUnicode = false): bool
 > like accented letters, and alphabetical characters from some languages.
 > This option is disabled by default.
 
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Validators\TStringIsAlpha;
+```
+
 <h3>Examples</h3>
 
 ```php
