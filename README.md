@@ -100,7 +100,32 @@ if  (TString::contains($haystack, $needle, false)) {
 # Validators
 
 ## contains
-> Under development
+
+Checks if a substring is contained in another string.
+
+```php
+contains(string $haystack, string $needle, bool $caseSensitive = true): bool
+```
+> [!NOTE]
+> By default the case sensitiveness is enabled.
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Validators\TStringContains;
+```
+
+<h3>Examples</h3>
+
+```php
+$text = 'The quick brown fox jumps over the lazy dog';
+
+contains($text, 'fox jumps'); // returns true
+contains($text, 'OVER', false); // returns true, case insensitive
+
+contains($text, 'red fox'); // returns false
+contains($text, 'LAZY DOG'); // returns false, case sensitive
+```
 
 ## isAplha
 > Under development
