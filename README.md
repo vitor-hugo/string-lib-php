@@ -195,7 +195,27 @@ isAlphanumeric("1983年は最高の年だ"); // returns false (unicode disabled)
 ```
 
 ## isBase64
-> Under development
+
+Validates whether a string is in Base64 format.  
+Also validates url safe Base64 strings.
+
+```php
+protected static function isBase64(string $base64): bool;
+```
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Validators\TStringIsBase64;
+```
+
+<h3>Examples</h3>
+
+```php
+isBase64('THVrZSBJIGFtIHlvdXIgZmF0aGVyIQ=='); // returns true
+isBase64('V2h5IHNvIHNlcmlvdXM/'); // returns true (url safe)
+isBase64('VGhp/cy=BpcyBhIHRlc3Q'); // returns false
+```
 
 ## isCnpj
 > Under development
