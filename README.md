@@ -19,7 +19,6 @@ Small toolset for validating and manipulating strings
   - [isBase64](#isbase64)
   - [isCnpj](#iscnpj)
   - [isCpf](#iscpf)
-  - [isEmail](#isemail)
   - [isNumeric](#isnumeric)
   - [lengthRange](#lengthrange)
   - [matchRegex](#matchregex)
@@ -292,11 +291,9 @@ isCpf('532.625.750-541'); // returns false, invalid length
 > The CPF numbers above were generated randomly using [this tool](https://www.4devs.com.br/gerador_de_cpf).  
 > If one of them belongs to you, please send me a request and I will remove it immediately.
 
-## isEmail
-> Under development
-
 ## isNumeric
-> Under development
+
+Validates if a string have only numeric characters
 
 ## lengthRange
 > Under development
