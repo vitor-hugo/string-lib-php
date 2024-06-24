@@ -12,6 +12,21 @@ Small toolset for validating and manipulating strings
 - [Usage](#usage)
   - [Via Traits](#via-traits)
   - [Via TString object](#via-tstring-object)
+- [Validators](#validators)
+  - [contains](#contains)
+  - [isAplha](#isaplha)
+  - [isAplhanumeric](#isaplhanumeric)
+  - [isBase64](#isbase64)
+  - [isCnpj](#iscnpj)
+  - [isCpf](#iscpf)
+  - [isEmail](#isemail)
+  - [isNumeric](#isnumeric)
+  - [lengthRange](#lengthrange)
+  - [matchRegex](#matchregex)
+  - [maxLength](#maxlength)
+  - [minLength](#minlength)
+  - [maxVersion](#maxversion)
+  - [minVersion](#minversion)
 - [Contribute](#contribute)
 - [License](#license)
 
@@ -72,6 +87,53 @@ if  (TString::contains($haystack, $needle, false)) {
     // Do something
 }
 ```
+
+<!-- MARK: Validators -->
+
+# Validators
+
+## contains
+> Under development
+
+## isAplha
+> Under development
+
+## isAplhanumeric
+> Under development
+
+## isBase64
+> Under development
+
+## isCnpj
+> Under development
+
+## isCpf
+> Under development
+
+## isEmail
+> Under development
+
+## isNumeric
+> Under development
+
+## lengthRange
+> Under development
+
+## matchRegex
+> Under development
+
+## maxLength
+> Under development
+
+## minLength
+> Under development
+
+## maxVersion
+> Under development
+> 
+## minVersion
+> Under development
+
 
 # Contribute
 It is currently not open to contributions, I intend to make it available as soon as possible.
