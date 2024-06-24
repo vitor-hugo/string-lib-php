@@ -2,6 +2,7 @@
 
 namespace Torugo\TString;
 
+use Torugo\TString\Traits\Validators\TStringMaxVersion;
 use Torugo\TString\Traits\Validators\TStringMinVersion;
 
 /**
@@ -11,5 +12,6 @@ use Torugo\TString\Traits\Validators\TStringMinVersion;
  */
 class TString
 {
+    use TStringMaxVersion;
     use TStringMinVersion;
 }
