@@ -27,6 +27,13 @@ Small toolset for validating and manipulating strings
   - [minLength](#minlength)
   - [maxVersion](#maxversion)
   - [minVersion](#minversion)
+- [Manipulators](#manipulators)
+  - [append](#append)
+  - [capitalize](#capitalize)
+  - [prepend](#prepend)
+  - [replace](#replace)
+  - [toLowercase](#tolowercase)
+  - [toUppercase](#touppercase)
 - [Contribute](#contribute)
 - [License](#license)
 
@@ -132,6 +139,29 @@ if  (TString::contains($haystack, $needle, false)) {
 > Under development
 > 
 ## minVersion
+> Under development
+
+
+<!-- MARK: Manipulators -->
+
+# Manipulators
+
+## append
+> Under development
+
+## capitalize
+> Under development
+
+## prepend
+> Under development
+
+## replace
+> Under development
+
+## toLowercase
+> Under development
+
+## toUppercase
 > Under development
 
 
