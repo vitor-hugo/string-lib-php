@@ -14,7 +14,7 @@ Small toolset for validating and manipulating strings
   - [Via TString object](#via-tstring-object)
 - [Validators](#validators)
   - [contains](#contains)
-  - [isAplha](#isaplha)
+  - [isAlpha](#isalpha)
   - [isAplhanumeric](#isaplhanumeric)
   - [isBase64](#isbase64)
   - [isCnpj](#iscnpj)
@@ -127,7 +127,7 @@ contains($text, 'red fox'); // returns false
 contains($text, 'LAZY DOG'); // returns false, case sensitive
 ```
 
-## isAplha
+## isAlpha
 
 Validates if a string have only alphabetical characters.
 
