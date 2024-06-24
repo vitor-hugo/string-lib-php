@@ -7,6 +7,7 @@ use Torugo\TString\Traits\Validators\TStringIsAlpha;
 use Torugo\TString\Traits\Validators\TStringIsAlphanumeric;
 use Torugo\TString\Traits\Validators\TStringIsBase64;
 use Torugo\TString\Traits\Validators\TStringIsCnpj;
+use Torugo\TString\Traits\Validators\TStringIsCpf;
 use Torugo\TString\Traits\Validators\TStringMaxVersion;
 use Torugo\TString\Traits\Validators\TStringMinVersion;
 
@@ -22,6 +23,7 @@ class TString
     use TStringIsAlphanumeric;
     use TStringIsBase64;
     use TStringIsCnpj;
+    use TStringIsCpf;
     use TStringMaxVersion;
     use TStringMinVersion;
 }
