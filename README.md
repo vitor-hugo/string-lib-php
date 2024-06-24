@@ -15,7 +15,7 @@ Small toolset for validating and manipulating strings
 - [Validators](#validators)
   - [contains](#contains)
   - [isAlpha](#isalpha)
-  - [isAplhanumeric](#isaplhanumeric)
+  - [isAlphanumeric](#isalphanumeric)
   - [isBase64](#isbase64)
   - [isCnpj](#iscnpj)
   - [isCpf](#iscpf)
@@ -160,8 +160,39 @@ isAlpha("지능"); // returns false (unicode disabled)
 isAlpha("upplýsingaöflun"); // returns false (unicode disabled)
 ```
 
-## isAplhanumeric
-> Under development
+## isAlphanumeric
+
+Validates if a string have only alphanumeric characters.
+
+```php
+isAlphanumeric(string $str, bool $includeUnicode = false): bool
+```
+
+> [!NOTE]
+> When enabled, the argument **`$includeUnicode`** will include some unicode alphabetic characters
+> like accented letters, and alphabetical characters from some languages.
+> This option is disabled by default.
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Validators\TStringIsAlphanumeric;
+```
+
+<h3>Examples</h3>
+
+```php
+isAlphanumeric("abcdefghiklmnopqrstvxyzABCDEFGHIKLMNOPQRSTVXYZ0123456789"); // returns true
+isAlphanumeric("twy5Z0V0lzhOItTa"); // returns true
+isAlphanumeric("iZmáüàyÍsúL6DI00à0äúPÏvy", true); // returns true (unicode enabled)
+isAlphanumeric("έτος2024", true); // returns true (unicode enabled)
+isAlphanumeric("1983年は最高の年だ", true); // returns true (unicode enabled)
+
+isAlphanumeric("march 1983"); // returns false
+isAlphanumeric("13/03/1983"); // returns false
+isAlphanumeric("έτος2024"); // returns false (unicode disabled)
+isAlphanumeric("1983年は最高の年だ"); // returns false (unicode disabled)
+```
 
 ## isBase64
 > Under development
