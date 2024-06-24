@@ -218,7 +218,41 @@ isBase64('VGhp/cy=BpcyBhIHRlc3Q'); // returns false
 ```
 
 ## isCnpj
-> Under development
+
+Validates if a given string has a valid CNPJ registration.
+
+The Brazil National Registry of Legal Entities number (CNPJ) is a company identification number
+that must be obtained from the Department of Federal Revenue(Secretaria da Receita Federal do Brasil)
+prior to the start of any business activities.
+
+```php
+protected static function isCnpj(string $cnpj): bool
+```
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Validators\TStringIsCnpj;
+```
+
+<h3>Examples</h3>
+
+```php
+isCnpj('60391682000132'); // returns true
+isCnpj('99.453.669/0001-04'); // returns true, this is the default format
+isCnpj('99 453 669 / 0001 (04)'); // returns true, it removes non numerical characters
+
+isCnpj('99.453.669/0001-05'); // returns false, invalid verification digit
+isCnpj('9953669000105'); // returns false, invalid length
+isCnpj('999.453.669/0001-04'); // returns false, invalid length
+```
+
+> [!NOTE]
+> This validator uses a validation code from [Guilherme Sehn](https://gist.github.com/guisehn/3276302).
+
+> [!IMPORTANT]
+> The cnpj numbers above were generated randomly using [this tool](https://www.4devs.com.br/gerador_de_cnpj).  
+> If one of them belongs to you, please send me a request to remove.
 
 ## isCpf
 > Under development
