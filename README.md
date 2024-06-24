@@ -137,9 +137,37 @@ if  (TString::contains($haystack, $needle, false)) {
 
 ## maxVersion
 > Under development
-> 
+
 ## minVersion
-> Under development
+
+Checks if a version is greater or equal to a given one.
+
+This function validates version numbers that have only numbers sepatared by periods.  
+- Valid: '8.3.8', '5.0', '3.22.2', '10', '126.0.6478.63' ...
+- Invalid: '2.0.0-rc.1', '1.0.0-beta' ...
+  
+```php
+minVersion(string $version, string $required): bool
+```
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Validators\TStringMinVersion;
+```
+
+<h3>Examples</h3>
+
+```php
+minVersion('1.0.0', '1.0.0') // returns true
+minVersion('2.1', '2.0.0') // returns true
+minVersion('1.0.9', '1') // returns true
+minVersion('3.2.5', '3.2.5') // returns true
+
+minVersion('1.0.0', '1.0.1') // returns false
+minVersion('2.1.0', '2.2.0') // returns false
+minVersion('1', '1.1') // returns false
+```
 
 
 <!-- MARK: Manipulators -->
