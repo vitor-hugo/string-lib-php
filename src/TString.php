@@ -2,6 +2,8 @@
 
 namespace Torugo\TString;
 
+use Torugo\TString\Traits\Validators\TStringMinVersion;
+
 /**
  * Small toolset for validating and manipulating strings.
  *
@@ -9,4 +11,5 @@ namespace Torugo\TString;
  */
 class TString
 {
+    use TStringMinVersion;
 }
