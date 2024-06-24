@@ -128,7 +128,31 @@ contains($text, 'LAZY DOG'); // returns false, case sensitive
 ```
 
 ## isAplha
-> Under development
+
+Validates if a string have only alphabetical characters.
+
+```php
+isAlpha(string $str, bool $includeUnicode = false): bool
+```
+
+> [!NOTE]
+> When enabled, the argument **`$includeUnicode`** will include some unicode alphabetic characters
+> like accented letters, and alphabetical characters from some languages.
+> This option is disabled by default.
+
+<h3>Examples</h3>
+
+```php
+isAlpha("abcdefghiklmnopqrstvxyzABCDEFGHIKLMNOPQRSTVXYZ"); // returns true
+isAlpha("ãáàâäçéêëíïõóôöúüÃÁÀÂÄÇÉÊËÍÏÕÓÔÖÚÜ", true); // returns true (unicode enabled)
+isAlpha("ανάπτυξη", true); // returns true (unicode enabled)
+isAlpha("発達", true); // returns true (unicode enabled)
+
+isAlpha("Some text"); // returns false (no spaces)
+isAlpha("ãáàâäçéêëíïõóôöúüÃÁÀÂÄÇÉÊËÍÏÕÓÔÖÚÜ"); // returns false (unicode disabled)
+isAlpha("지능"); // returns false (unicode disabled)
+isAlpha("upplýsingaöflun"); // returns false (unicode disabled)
+```
 
 ## isAplhanumeric
 > Under development
