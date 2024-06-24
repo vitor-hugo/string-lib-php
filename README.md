@@ -255,7 +255,42 @@ isCnpj('999.453.669/0001-04'); // returns false, invalid length
 > If one of them belongs to you, please send me a request to remove.
 
 ## isCpf
-> Under development
+
+Validates if a given string has a valid CPF identification.
+
+CPF Stands for “Cadastro de Pessoas Físicas” or “Registry of Individuals”.
+It is similar to the “Social Security” number adopted in the US, and it is used as a type
+of universal identifier in Brazil.
+
+```php
+protected static function isCpf(string $cpf): bool
+```
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Validators\TStringIsCpf;
+```
+
+<h3>Examples</h3>
+
+```php
+isCpf('88479747048'); // returns true
+isCpf('532.625.750-54'); // returns true, this is the default format
+isCpf('532 625 750 (54)'); // returns true, removes non numerical characters
+
+isCpf('532.625.750-55'); // returns false, invalid verification digit
+isCpf('53.625.750-54'); // returns false, invalid length
+isCpf('532.625.750-541'); // returns false, invalid length
+```
+
+> [!NOTE]
+> This validator uses a validation code from
+> [Rafael Neri](https://gist.github.com/rafael-neri/ab3e58803a08cb4def059fce4e3c0e40).
+
+> [!IMPORTANT]
+> The CPF numbers above were generated randomly using [this tool](https://www.4devs.com.br/gerador_de_cpf).  
+> If one of them belongs to you, please send me a request and I will remove it immediately.
 
 ## isEmail
 > Under development
