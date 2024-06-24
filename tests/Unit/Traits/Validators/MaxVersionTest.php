@@ -6,7 +6,7 @@ use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
 use Torugo\TString\Traits\Validators\TStringMaxVersion;
 
-#[TestDox('MaxVersion validator')]
+#[TestDox('maxVersion() validator')]
 class MaxVersionTest extends TestCase
 {
     use TStringMaxVersion;

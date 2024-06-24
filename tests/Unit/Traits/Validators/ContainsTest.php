@@ -6,7 +6,7 @@ use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
 use Torugo\TString\Traits\Validators\TStringContains;
 
-#[TestDox('Contains validator')]
+#[TestDox('contains() validator')]
 class ContainsTest extends TestCase
 {
     use TStringContains;

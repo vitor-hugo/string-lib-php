@@ -6,7 +6,7 @@ use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
 use Torugo\TString\Traits\Validators\TStringMinVersion;
 
-#[TestDox('MinVersion validator')]
+#[TestDox('minVersion() validator')]
 class MinVersionTest extends TestCase
 {
     use TStringMinVersion;
