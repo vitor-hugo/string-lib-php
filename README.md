@@ -21,6 +21,7 @@ Inspired on [validator.js](https://github.com/validatorjs/validator.js).
   - [isBase64](#isbase64)
   - [isCnpj](#iscnpj)
   - [isCpf](#iscpf)
+  - [IsEmail](#isemail)
   - [IsHexadecimal](#ishexadecimal)
   - [isLength](#islength)
   - [isNumeric](#isnumeric)
@@ -292,6 +293,41 @@ isCpf('532.625.750-541'); // returns false, invalid length
 > [!IMPORTANT]
 > The CPF numbers above were generated randomly using [this tool](https://www.4devs.com.br/gerador_de_cpf).  
 > If one of them belongs to you, please send me a request and I will remove it immediately.
+
+## IsEmail
+
+Validates if a string has a valid email structure.
+
+```php
+protected function isEmail(string $email): bool
+```
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Validators\TStringIsEmail;
+```
+
+<h3>Examples</h3>
+
+```php
+// RETURNS TRUE
+isEmail('foo@bar.com');
+isEmail('x@x.com');
+isEmail('foo@bar.com.br');
+isEmail('foo+bar@bar.com');
+
+
+// RETURNS FALSE
+isEmail('invalidemail@');
+isEmail('invalid.com');
+isEmail('@invalid.com');
+isEmail('foo@bar.com.');
+```
+
+> [!TIP]
+> Take a look at the [tests](./tests/Unit/Traits/Validators/IsEmailTest.php)
+> to see more of valid or invalid e-mails.
 
 ## IsHexadecimal
 
