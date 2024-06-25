@@ -10,6 +10,7 @@ use Torugo\TString\Traits\Validators\TStringIsCnpj;
 use Torugo\TString\Traits\Validators\TStringIsCpf;
 use Torugo\TString\Traits\Validators\TStringIsLength;
 use Torugo\TString\Traits\Validators\TStringIsNumeric;
+use Torugo\TString\Traits\Validators\TStringMaxLength;
 use Torugo\TString\Traits\Validators\TStringMaxVersion;
 use Torugo\TString\Traits\Validators\TStringMinVersion;
 
@@ -28,6 +29,7 @@ class TString
     use TStringIsCpf;
     use TStringIsLength;
     use TStringIsNumeric;
+    use TStringMaxLength;
     use TStringMaxVersion;
     use TStringMinVersion;
 }
