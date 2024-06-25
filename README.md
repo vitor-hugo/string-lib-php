@@ -30,12 +30,9 @@ Inspired on [validator.js](https://github.com/validatorjs/validator.js).
   - [maxVersion](#maxversion)
   - [minVersion](#minversion)
 - [Handlers](#handlers)
-  - [append](#append)
-  - [capitalize](#capitalize)
-  - [prepend](#prepend)
-  - [replace](#replace)
-  - [toLowercase](#tolowercase)
-  - [toUppercase](#touppercase)
+  - [toLowerCase](#tolowercase)
+  - [toTitleCase](#totitlecase)
+  - [toUpperCase](#touppercase)
 - [Contribute](#contribute)
 - [License](#license)
 
@@ -532,23 +529,92 @@ minVersion('1', '1.1') // returns false
 
 # Handlers
 
-## append
-> Under development
+## toLowerCase
 
-## capitalize
-> Under development
+Changes the case of a string to lowercase.
 
-## prepend
-> Under development
+```php
+toLowerCase(string $str): string
+```
 
-## replace
-> Under development
+<h3>Trait Namespace</h3>
 
-## toLowercase
-> Under development
+```php
+use Torugo\TString\Traits\Handlers\TStringToLowerCase;
+```
 
-## toUppercase
-> Under development
+<h3>Examples</h3>
+
+```php
+toLowerCase('LUKE I AM YOUR FATHER'); // returns 'luke i am your father'
+toLowerCase('R2D2'); // returns 'r2d2'
+toLowerCase('JOSÉ DE ALENCAR'); // returns 'josé de alencar'
+```
+
+## toTitleCase
+
+Changes the case of a string to title case, with options to fix Roman numerals
+and Portuguese language prepositions.
+
+```php
+toTitleCase(
+    string $str,
+    bool $fixRomanNumerals = false,
+    bool $fixPortuguesePrepositions = false
+): string
+```
+
+> [!NOTE]
+> The arguments `$fixRomanNumerals` and `$fixPortuguesePrepositions` are disabled by default.
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Handlers\TStringToTitleCase;
+```
+
+<h3>Examples</h3>
+
+```php
+// WITH DEFAULT OPTIONS
+toTitleCase('LUKE SKYWALKER'); // returns 'Luke Skywalker'
+toTitleCase('carlos drummond de andrade'); // returns 'Carlos Drummond De Andrade'
+toTitleCase('Pope Gregory XIII'); // returns 'Pope Gregory Xiii'
+
+// FIXING ROMAN NUMERALS
+toTitleCase('pope gregory xiii', true, false); // returns 'Pope Gregory XIII'
+toTitleCase('DALAI LAMA XIV', true, false); // returns 'Dalai Lama XIV'
+
+// FIXING PORTUGUESE PREPOSITIONS
+toTitleCase('NISE DA SILVEIRA', false, true); // returns 'Nise da Silveira'
+toTitleCase('Tarsila Do Amaral', false, true); // returns 'Tarsila do Amaral'
+
+// BOTH OPTIONS ENABLED
+toTitleCase('xv de piracicaba', true, true); // returns 'XV de Piracicaba'
+toTitleCase('JOSÉ BONIFÁCIO DE ANDRADA E SILVA II', true, true); // returns 'José Bonifácio de Andrada e Silva II'
+```
+
+## toUpperCase
+
+Changes the case of a string to uppercase.
+
+```php
+toUpperCase(string $str): string
+```
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Handlers\TStringToUpperCase;
+```
+
+<h3>Examples</h3>
+
+```php
+toUpperCase('may the force be with you'); // returns 'MAY THE FORCE BE WITH YOU'
+toUpperCase('c3po'); // returns 'C3PO'
+toUpperCase('Cecília Meireles'); // returns 'CECÍLIA MEIRELES'
+```
 
 
 # Contribute
