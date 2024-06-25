@@ -19,8 +19,8 @@ Small toolset for validating and manipulating strings
   - [isBase64](#isbase64)
   - [isCnpj](#iscnpj)
   - [isCpf](#iscpf)
+  - [isLength](#islength)
   - [isNumeric](#isnumeric)
-  - [lengthRange](#lengthrange)
   - [matchRegex](#matchregex)
   - [maxLength](#maxlength)
   - [minLength](#minlength)
@@ -291,6 +291,35 @@ isCpf('532.625.750-541'); // returns false, invalid length
 > The CPF numbers above were generated randomly using [this tool](https://www.4devs.com.br/gerador_de_cpf).  
 > If one of them belongs to you, please send me a request and I will remove it immediately.
 
+## isLength
+
+Validates if the length of a string is between the minimum and maximum parameters.
+
+```php
+protected function isLength(string $str, int $min, int $max): bool
+```
+
+> [!IMPORTANT]
+> If `$min` is negative it will be setted to `0` (zero).  
+> If `$max` is lesser than `1` it will be setted to `1`.  
+> If `$min` is lesser than `$max`, their values will be swapped.  
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Validators\TStringIsNumeric;
+```
+
+<h3>Examples</h3>
+
+```php
+isLength('MySuperStrongPassword!', 8, 64); // returns true
+isLength('yágftÔúÍézÏP5mÕ3(8G}KQÖÜ', 24, 26); // returns true
+
+isLength('fZ?ávãYów3j);ÜMK7!:k', 10, 20); // returns false, exceeded maximum length
+isLength('xRh8É<', 8, 16); // returns false, did not reach the minimum length
+```
+
 ## isNumeric
 
 Validates if a string have only numeric characters.
@@ -317,9 +346,6 @@ isNumeric('3.1415'); // returns false, ponctuation disabled
 isNumeric('R$ 999,99', true); // returns false, invalid characters
 isNumeric('2.2.0', true); // returns false
 ```
-
-## lengthRange
-> Under development
 
 ## matchRegex
 > Under development
