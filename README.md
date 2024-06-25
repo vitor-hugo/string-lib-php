@@ -62,7 +62,7 @@ You can use this library in two ways, using specific **Traits** or **instantiati
 Traits are a good way to use only the functions you need, just use them within your classes.
 
 > [!NOTE]
-> All valitors and manipulators traits functions visibility are `public static`.
+> All valitors and manipulators traits functions visibility are `protected static`.
 
 ```php
 use Torugo\TString\Traits\Validators\TStringContains;
