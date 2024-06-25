@@ -21,7 +21,6 @@ Small toolset for validating and manipulating strings
   - [isCpf](#iscpf)
   - [isLength](#islength)
   - [isNumeric](#isnumeric)
-  - [matchRegex](#matchregex)
   - [maxLength](#maxlength)
   - [minLength](#minlength)
   - [maxVersion](#maxversion)
@@ -346,9 +345,6 @@ isNumeric('3.1415'); // returns false, ponctuation disabled
 isNumeric('R$ 999,99', true); // returns false, invalid characters
 isNumeric('2.2.0', true); // returns false
 ```
-
-## matchRegex
-> Under development
 
 ## maxLength
 
