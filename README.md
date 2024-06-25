@@ -30,6 +30,7 @@ Inspired on [validator.js](https://github.com/validatorjs/validator.js).
   - [maxVersion](#maxversion)
   - [minVersion](#minversion)
 - [Handlers](#handlers)
+  - [toString](#tostring)
   - [toLowerCase](#tolowercase)
   - [toTitleCase](#totitlecase)
   - [toUpperCase](#touppercase)
@@ -528,6 +529,44 @@ minVersion('1', '1.1') // returns false
 <!-- MARK: Handlers -->
 
 # Handlers
+
+## toString
+
+Tries to convert some types to string.
+
+| Types supported | Notes                                                                      |
+| --------------- | -------------------------------------------------------------------------- |
+| `integer`       | Simple int to string convertion                                            |
+| `double`        | Simple double to string convertion                                         |
+| `boolean`       | Returns `'true'` or `'false'` string values                                |
+| `array`         | Implodes elements with an empty (`''`) separator by default                |
+| `object`        | Checks if object implements `__toString()` method, otherwise returns false |
+| `resource`      | Tries to get the outup stream, returns false in case of fail               |
+| `NULL`          | Returns an empty string (`''`)                                             |
+
+```php
+toString(mixed $value, string $arraySeparator = ''): string|false
+```
+
+> [!NOTE]
+> Returns a `string` when succeed, and `false` on fail.  
+> The `$arraySeparator` is used only when the value's type is 'array'.
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Handlers\TStringToString;
+```
+
+<h3>Examples</h3>
+
+```php
+toString(2017); // returns '2017'
+toString(1999.99); // returns '1999.99'
+toString(true); // returns 'true'
+toString(["A", "B", "C"]); // returns 'ABC'
+toString([185, 85, 0, 29], '.'); // returns '185.85.0.29'
+```
 
 ## toLowerCase
 
