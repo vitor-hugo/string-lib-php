@@ -14,10 +14,6 @@ trait TStringIsNumeric
     public static function isNumeric(string $str, bool $includePonctuation = false): bool
     {
         $pattern = $includePonctuation ? '/^(\d+|\d{1,3}(,\d{3})*)(\.\d+)?$/' : '/^[0-9]+$/';
-        // if ($str === '123-456') {
-        //     var_dump($pattern);
-        //     var_dump(preg_match($pattern, $str));
-        // }
 
         $match = preg_match($pattern, $str);
 
