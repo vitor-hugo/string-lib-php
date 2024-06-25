@@ -8,6 +8,7 @@ use Torugo\TString\Traits\Validators\TStringIsAlphanumeric;
 use Torugo\TString\Traits\Validators\TStringIsBase64;
 use Torugo\TString\Traits\Validators\TStringIsCnpj;
 use Torugo\TString\Traits\Validators\TStringIsCpf;
+use Torugo\TString\Traits\Validators\TStringIsHexadecimal;
 use Torugo\TString\Traits\Validators\TStringIsLength;
 use Torugo\TString\Traits\Validators\TStringIsNumeric;
 use Torugo\TString\Traits\Validators\TStringMaxLength;
@@ -28,6 +29,7 @@ class TString
     use TStringIsBase64;
     use TStringIsCnpj;
     use TStringIsCpf;
+    use TStringIsHexadecimal;
     use TStringIsLength;
     use TStringIsNumeric;
     use TStringMaxLength;
