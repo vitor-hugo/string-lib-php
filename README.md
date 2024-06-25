@@ -375,35 +375,31 @@ maxLength('DXaEbx', 5); // returns false
 maxLength('X', 0); // sets max parameter to 1 and returns true
 maxLength('Y', -1); // sets max parameter to 1 and returns true
 ```
+
+## minLength
+
+Validates if the length of a string is greater than or equal to a minimum parameter.
+
 ```php
 protected function minLength(string $str, int $min): bool
 ```
 
-> [!IMPORTANT]
-> If `$min` is negative it will be setted to `0` (zero).  
-> If `$max` is lesser than `1` it will be setted to `1`.  
-> If `$min` is lesser than `$max`, their values will be swapped.  
-
 <h3>Trait Namespace</h3>
 
 ```php
-use Torugo\TString\Traits\Validators\TStringMaxLength;
+use Torugo\TString\Traits\Validators\TStringMinLength;
 ```
 
 <h3>Examples</h3>
 
 ```php
-maxLength('pSqKDfErCG5zTkmh', 18); // returns true
-maxLength('cETíÁ4ÃR9k=Hj7óGÜt@8', 20); // returns true
+minLength('kfRb7qhmdWear4X9', 15); // returns true
+minLength('jCa3xMe9GZ82pmKu', 16); // returns true
 
-maxLength('DXaE', 5); // returns false
+minLength('afdvkxzeg9AwrB8D57XE3pj', 24); // returns false
 
-maxLength('X', 0); // sets max parameter to 1 and returns true
-maxLength('Y', -1); // sets max parameter to 1 and returns true
+minLength('Y', -1); // sets min parameter to 0 and returns true
 ```
-
-## minLength
-> Under development
 
 ## maxVersion
 
