@@ -2,6 +2,9 @@
 
 namespace Torugo\TString;
 
+use Torugo\TString\Traits\Handlers\TStringToLowerCase;
+use Torugo\TString\Traits\Handlers\TStringToTitleCase;
+use Torugo\TString\Traits\Handlers\TStringToUpperCase;
 use Torugo\TString\Traits\Validators\TStringContains;
 use Torugo\TString\Traits\Validators\TStringIsAlpha;
 use Torugo\TString\Traits\Validators\TStringIsAlphanumeric;
@@ -38,4 +41,8 @@ class TString
     use TStringMaxVersion;
     use TStringMinLength;
     use TStringMinVersion;
+
+    use TStringToLowerCase;
+    use TStringToTitleCase;
+    use TStringToUpperCase;
 }
