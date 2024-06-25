@@ -370,7 +370,7 @@ use Torugo\TString\Traits\Validators\TStringMaxLength;
 maxLength('pSqKDfErCG5zTkmh', 18); // returns true
 maxLength('cETíÁ4ÃR9k=Hj7óGÜt@8', 20); // returns true
 
-maxLength('DXaE', 5); // returns false
+maxLength('DXaEbx', 5); // returns false
 
 maxLength('X', 0); // sets max parameter to 1 and returns true
 maxLength('Y', -1); // sets max parameter to 1 and returns true
