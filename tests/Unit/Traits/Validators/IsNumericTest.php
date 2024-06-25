@@ -24,6 +24,7 @@ class IsNumericTest extends TestCase
     #[TestDox('Should return TRUE when $includePonctuation argument enabled')]
     public function testShouldReturnTrueOnValidPonctuation()
     {
+        $this->assertTrue($this->isNumeric('3.1415', true));
         $this->assertTrue($this->isNumeric('534,763,185.78', true));
     }
 
@@ -40,5 +41,6 @@ class IsNumericTest extends TestCase
     {
         $this->assertFalse($this->isNumeric('123-456'));
         $this->assertFalse($this->isNumeric('199O'));
+        $this->assertFalse($this->isNumeric('USD 9.99', true));
     }
 }
