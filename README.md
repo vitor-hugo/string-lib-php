@@ -13,7 +13,7 @@ Inspired on [validator.js](https://github.com/validatorjs/validator.js).
 - [Installation](#installation)
 - [Usage](#usage)
   - [Via Traits](#via-traits)
-  - [Via TString object](#via-tstring-object)
+  - [Via TString static object](#via-tstring-static-object)
 - [Validators](#validators)
   - [contains](#contains)
   - [isAlpha](#isalpha)
@@ -82,7 +82,7 @@ class MyClass()
 ```
 
 
-## Via TString object
+## Via TString static object
 
 TString class is the easiest way to use the functions of this library, by using it you will have
 access to all features in a single object.
