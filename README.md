@@ -19,6 +19,7 @@ Small toolset for validating and manipulating strings
   - [isBase64](#isbase64)
   - [isCnpj](#iscnpj)
   - [isCpf](#iscpf)
+  - [IsHexadecimal](#ishexadecimal)
   - [isLength](#islength)
   - [isNumeric](#isnumeric)
   - [maxLength](#maxlength)
@@ -289,6 +290,35 @@ isCpf('532.625.750-541'); // returns false, invalid length
 > [!IMPORTANT]
 > The CPF numbers above were generated randomly using [this tool](https://www.4devs.com.br/gerador_de_cpf).  
 > If one of them belongs to you, please send me a request and I will remove it immediately.
+
+## IsHexadecimal
+
+Validates if a string is a hexadecimal number.
+
+```php
+protected function isHexadecimal(string $hex): bool
+```
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Validators\TStringIsHexadecimal;
+```
+
+<h3>Examples</h3>
+
+```php
+isHexadecimal('c0627d4e8eae2e8e584d'); // returns true
+isHexadecimal('1D5D98'); // returns true
+isHexadecimal('0x4041E2F71BA5'); // returns true
+isHexadecimal('0x15e1aea12b49'); // returns true
+
+isHexadecimal('i0qh9o2pfm'); // returns false
+isHexadecimal('#4EFCB7'); // returns false
+isHexadecimal(' 4EFCB7 '); // returns false
+isHexadecimal(''); // returns false
+isHexadecimal('0X62F12E'); // returns true
+```
 
 ## isLength
 
