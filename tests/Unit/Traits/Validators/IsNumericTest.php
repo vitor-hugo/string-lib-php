@@ -2,10 +2,12 @@
 
 namespace Tests\Unit\Traits\Validators;
 
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
 use Torugo\TString\Traits\Validators\TStringIsNumeric;
 
+#[Group('isNumeric')]
 #[TestDox('isNumeric() validator')]
 class IsNumericTest extends TestCase
 {
