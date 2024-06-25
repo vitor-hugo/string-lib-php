@@ -3,6 +3,7 @@
 namespace Torugo\TString;
 
 use Torugo\TString\Traits\Handlers\TStringToLowerCase;
+use Torugo\TString\Traits\Handlers\TStringToString;
 use Torugo\TString\Traits\Handlers\TStringToTitleCase;
 use Torugo\TString\Traits\Handlers\TStringToUpperCase;
 use Torugo\TString\Traits\Validators\TStringContains;
@@ -43,6 +44,7 @@ class TString
     use TStringMinVersion;
 
     use TStringToLowerCase;
+    use TStringToString;
     use TStringToTitleCase;
     use TStringToUpperCase;
 }
