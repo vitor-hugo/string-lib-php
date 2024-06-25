@@ -299,7 +299,7 @@ isCpf('532.625.750-541'); // returns false, invalid length
 Validates if a string has a valid email structure.
 
 ```php
-protected function isEmail(string $email): bool
+isEmail(string $email): bool
 ```
 
 <h3>Trait Namespace</h3>
@@ -334,7 +334,7 @@ isEmail('foo@bar.com.');
 Validates if a string is a hexadecimal number.
 
 ```php
-protected function isHexadecimal(string $hex): bool
+isHexadecimal(string $hex): bool
 ```
 
 <h3>Trait Namespace</h3>
@@ -363,7 +363,7 @@ isHexadecimal('0X62F12E'); // returns true
 Validates if the length of a string is between the minimum and maximum parameters.
 
 ```php
-protected function isLength(string $str, int $min, int $max): bool
+isLength(string $str, int $min, int $max): bool
 ```
 
 > [!IMPORTANT]
@@ -419,7 +419,7 @@ isNumeric('2.2.0', true); // returns false
 Validates if the length of a string is lesser than or equal to a maximum parameter.
 
 ```php
-protected function maxLength(string $str, int $max): bool
+maxLength(string $str, int $max): bool
 ```
 
 <h3>Trait Namespace</h3>
@@ -445,7 +445,7 @@ maxLength('Y', -1); // sets max parameter to 1 and returns true
 Validates if the length of a string is greater than or equal to a minimum parameter.
 
 ```php
-protected function minLength(string $str, int $min): bool
+minLength(string $str, int $min): bool
 ```
 
 <h3>Trait Namespace</h3>
