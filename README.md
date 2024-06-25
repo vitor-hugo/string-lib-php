@@ -3,7 +3,7 @@
 
 # TString <!-- omit in toc -->
 
-Small toolset for validating and manipulating strings.
+Small toolset for validating and handling strings.
 
 Inspired on [validator.js](https://github.com/validatorjs/validator.js).
 
@@ -29,7 +29,7 @@ Inspired on [validator.js](https://github.com/validatorjs/validator.js).
   - [minLength](#minlength)
   - [maxVersion](#maxversion)
   - [minVersion](#minversion)
-- [Manipulators](#manipulators)
+- [Handlers](#handlers)
   - [append](#append)
   - [capitalize](#capitalize)
   - [prepend](#prepend)
@@ -528,9 +528,9 @@ minVersion('1', '1.1') // returns false
 ```
 
 
-<!-- MARK: Manipulators -->
+<!-- MARK: Handlers -->
 
-# Manipulators
+# Handlers
 
 ## append
 > Under development
