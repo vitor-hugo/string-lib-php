@@ -99,6 +99,7 @@ if  (TString::contains($haystack, $needle, false)) {
 
 # Validators
 
+
 ## contains
 
 Checks if a substring is contained in another string.
@@ -126,6 +127,7 @@ contains($text, 'OVER', false); // returns true, case insensitive
 contains($text, 'red fox'); // returns false
 contains($text, 'LAZY DOG'); // returns false, case sensitive
 ```
+
 
 ## isAlpha
 
@@ -159,6 +161,7 @@ isAlpha("ãáàâäçéêëíïõóôöúüÃÁÀÂÄÇÉÊËÍÏÕÓÔÖÚÜ");
 isAlpha("지능"); // returns false (unicode disabled)
 isAlpha("upplýsingaöflun"); // returns false (unicode disabled)
 ```
+
 
 ## isAlphanumeric
 
@@ -194,6 +197,7 @@ isAlphanumeric("έτος2024"); // returns false (unicode disabled)
 isAlphanumeric("1983年は最高の年だ"); // returns false (unicode disabled)
 ```
 
+
 ## isBase64
 
 Validates whether a string is in Base64 format.  
@@ -216,6 +220,7 @@ isBase64('THVrZSBJIGFtIHlvdXIgZmF0aGVyIQ=='); // returns true
 isBase64('V2h5IHNvIHNlcmlvdXM/'); // returns true (url safe)
 isBase64('VGhp/cy=BpcyBhIHRlc3Q'); // returns false
 ```
+
 
 ## isCnpj
 
@@ -253,6 +258,7 @@ isCnpj('999.453.669/0001-04'); // returns false, invalid length
 > [!IMPORTANT]
 > The cnpj numbers above were generated randomly using [this tool](https://www.4devs.com.br/gerador_de_cnpj).  
 > If one of them belongs to you, please send me a request to remove.
+
 
 ## isCpf
 
@@ -292,6 +298,7 @@ isCpf('532.625.750-541'); // returns false, invalid length
 > The CPF numbers above were generated randomly using [this tool](https://www.4devs.com.br/gerador_de_cpf).  
 > If one of them belongs to you, please send me a request and I will remove it immediately.
 
+
 ## IsEmail
 
 Validates if a string has a valid email structure.
@@ -327,6 +334,7 @@ isEmail('foo@bar.com.');
 > Take a look at the [tests](./tests/Unit/Traits/Validators/IsEmailTest.php)
 > to see more of valid or invalid e-mails.
 
+
 ## IsHexadecimal
 
 Validates if a string is a hexadecimal number.
@@ -355,6 +363,7 @@ isHexadecimal(' 4EFCB7 '); // returns false
 isHexadecimal(''); // returns false
 isHexadecimal('0X62F12E'); // returns true
 ```
+
 
 ## isLength
 
@@ -385,6 +394,7 @@ isLength('fZ?ávãYów3j);ÜMK7!:k', 10, 20); // returns false, exceeded maximum
 isLength('xRh8É<', 8, 16); // returns false, did not reach the minimum length
 ```
 
+
 ## isNumeric
 
 Validates if a string have only numeric characters.
@@ -412,6 +422,7 @@ isNumeric('R$ 999,99', true); // returns false, invalid characters
 isNumeric('2.2.0', true); // returns false
 ```
 
+
 ## maxLength
 
 Validates if the length of a string is lesser than or equal to a maximum parameter.
@@ -438,6 +449,7 @@ maxLength('X', 0); // sets max parameter to 1 and returns true
 maxLength('Y', -1); // sets max parameter to 1 and returns true
 ```
 
+
 ## minLength
 
 Validates if the length of a string is greater than or equal to a minimum parameter.
@@ -462,6 +474,7 @@ minLength('afdvkxzeg9AwrB8D57XE3pj', 24); // returns false
 
 minLength('Y', -1); // sets min parameter to 0 and returns true
 ```
+
 
 ## maxVersion
 
@@ -493,6 +506,7 @@ maxVersion('1.0.1', '1.0.0') // returns false
 maxVersion('2.2.0', '2.1.0') // returns false
 maxVersion('1.1', '1') // returns false
 ```
+
 
 ## minVersion
 
@@ -529,6 +543,7 @@ minVersion('1', '1.1') // returns false
 <!-- MARK: Handlers -->
 
 # Handlers
+
 
 ## toString
 
@@ -568,6 +583,7 @@ toString(["A", "B", "C"]); // returns 'ABC'
 toString([185, 85, 0, 29], '.'); // returns '185.85.0.29'
 ```
 
+
 ## toLowerCase
 
 Changes the case of a string to lowercase.
@@ -589,6 +605,7 @@ toLowerCase('LUKE I AM YOUR FATHER'); // returns 'luke i am your father'
 toLowerCase('R2D2'); // returns 'r2d2'
 toLowerCase('JOSÉ DE ALENCAR'); // returns 'josé de alencar'
 ```
+
 
 ## toTitleCase
 
@@ -632,6 +649,7 @@ toTitleCase('Tarsila Do Amaral', false, true); // returns 'Tarsila do Amaral'
 toTitleCase('xv de piracicaba', true, true); // returns 'XV de Piracicaba'
 toTitleCase('JOSÉ BONIFÁCIO DE ANDRADA E SILVA II', true, true); // returns 'José Bonifácio de Andrada e Silva II'
 ```
+
 
 ## toUpperCase
 
