@@ -3,7 +3,9 @@
 
 # TString <!-- omit in toc -->
 
-Small toolset for validating and manipulating strings
+Small toolset for validating and manipulating strings.
+
+Inspired on [validator.js](https://github.com/validatorjs/validator.js).
 
 # Table of Contents <!-- omit in toc -->
 
