@@ -12,6 +12,7 @@ use Torugo\TString\Traits\Validators\TStringIsLength;
 use Torugo\TString\Traits\Validators\TStringIsNumeric;
 use Torugo\TString\Traits\Validators\TStringMaxLength;
 use Torugo\TString\Traits\Validators\TStringMaxVersion;
+use Torugo\TString\Traits\Validators\TStringMinLength;
 use Torugo\TString\Traits\Validators\TStringMinVersion;
 
 /**
@@ -31,5 +32,6 @@ class TString
     use TStringIsNumeric;
     use TStringMaxLength;
     use TStringMaxVersion;
+    use TStringMinLength;
     use TStringMinVersion;
 }
