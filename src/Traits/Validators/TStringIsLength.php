@@ -12,7 +12,6 @@ trait TStringIsLength
      * @param string $str String to be validated.
      * @param int $min Minimum acceptable length. Must be >= 0.
      * @param int $max Maximum accpetable length. Must be >= 1.
-     * @throws \InvalidArgumentException when min or max sizes is negative
      * @return bool
      */
     protected function isLength(string $str, int $min, int $max): bool
