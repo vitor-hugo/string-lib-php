@@ -355,6 +355,27 @@ isNumeric('2.2.0', true); // returns false
 Validates if the length of a string is lesser than or equal to a maximum parameter.
 
 ```php
+protected function maxLength(string $str, int $max): bool
+```
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Validators\TStringMaxLength;
+```
+
+<h3>Examples</h3>
+
+```php
+maxLength('pSqKDfErCG5zTkmh', 18); // returns true
+maxLength('cETíÁ4ÃR9k=Hj7óGÜt@8', 20); // returns true
+
+maxLength('DXaE', 5); // returns false
+
+maxLength('X', 0); // sets max parameter to 1 and returns true
+maxLength('Y', -1); // sets max parameter to 1 and returns true
+```
+```php
 protected function minLength(string $str, int $min): bool
 ```
 
