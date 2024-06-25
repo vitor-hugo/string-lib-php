@@ -293,7 +293,30 @@ isCpf('532.625.750-541'); // returns false, invalid length
 
 ## isNumeric
 
-Validates if a string have only numeric characters
+Validates if a string have only numeric characters.
+
+```php
+public static function isNumeric(string $str, bool $includePonctuation = false): bool
+```
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Validators\TStringIsNumeric;
+```
+
+<h3>Examples</h3>
+
+```php
+isNumeric('100'); // returns true
+isNumeric('-15'); // returns true 
+isNumeric('3.1415', true); // returns true, ponctuation enabled
+isNumeric('1,999.99', true); // returns true, ponctuation enabled
+
+isNumeric('3.1415'); // returns false, ponctuation disabled
+isNumeric('R$ 999,99', true); // returns false, invalid characters
+isNumeric('2.2.0', true); // returns false
+```
 
 ## lengthRange
 > Under development
