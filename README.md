@@ -25,6 +25,8 @@ Inspired on [validator.js](https://github.com/validatorjs/validator.js).
   - [IsHexadecimal](#ishexadecimal)
   - [isLength](#islength)
   - [isNumeric](#isnumeric)
+  - [isUrl](#isurl)
+    - [UrlOptions](#urloptions)
   - [maxLength](#maxlength)
   - [minLength](#minlength)
   - [maxVersion](#maxversion)
@@ -422,6 +424,68 @@ isNumeric('R$ 999,99', true); // returns false, invalid characters
 isNumeric('2.2.0', true); // returns false
 ```
 
+
+## isUrl
+
+Validates if a string have only numeric characters.
+
+> [!NOTE]
+> This validator is based on [validator.js](https://github.com/validatorjs/validator.js)
+
+```php
+public static function isUrl(string $url, URLOptions $options = false): bool
+```
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Validators\TStringIsUrl;
+```
+
+<h3>Examples</h3>
+
+```php
+// VALID
+isUrl('foobar.com');
+isUrl('www.foobar.com');
+isUrl('http://www.foobar.com/');
+isUrl('http://127.0.0.1/',);
+isUrl('http://10.0.0.0/',);
+isUrl('http://189.123.14.13/',);
+isUrl('http://duckduckgo.com/?q=%2F',);
+
+// INVALID
+isUrl('http://www.foobar.com:0/',);
+isUrl('http://www.foobar.com:70000/',);
+isUrl('http://www.foobar.com:99999/',);
+isUrl('http://www.-foobar.com/',);
+isUrl('http://www.foobar-.com/',);
+```
+
+### UrlOptions
+
+Default values:
+
+```php
+$options = new UrlOptions();
+
+$options->protocols = ["http", "https", "ftp"];
+$options->requireTld = true;
+$options->requireProtocol = false;
+$options->requireHost = true;
+$options->requirePort = false;
+$options->requireValidProtocol = true;
+$options->allowUnderscores = false;
+$options->allowTrailingDot = false;
+$options->allowProtocolRelativeUrls = false;
+$options->allowFragments = true;
+$options->allowQueryComponents = true;
+$options->allowAuth = true;
+$options->allowNumericTld = false;
+$options->allowWildcard = false;
+$options->validateLength = true;
+$options->ignoreMaxLength = false;
+```
 
 ## maxLength
 
