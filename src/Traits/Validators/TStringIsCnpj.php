@@ -6,7 +6,7 @@ trait TStringIsCnpj
 {
 
     /**
-     * Validates if a property as a valid CNPJ registration.
+     * Validates if a property has a valid CNPJ registration.
      *
      * The Brazil National Registry of Legal Entities number (CNPJ) is a company identification number
      * that must be obtained from the Department of Federal Revenue(Secretaria da Receita Federal do Brasil)
