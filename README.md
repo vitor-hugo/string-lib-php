@@ -467,24 +467,23 @@ isUrl('http://www.foobar-.com/',);
 Default values:
 
 ```php
-$options = new UrlOptions();
-
-$options->protocols = ["http", "https", "ftp"];
-$options->requireTld = true;
-$options->requireProtocol = false;
-$options->requireHost = true;
-$options->requirePort = false;
-$options->requireValidProtocol = true;
-$options->allowUnderscores = false;
-$options->allowTrailingDot = false;
-$options->allowProtocolRelativeUrls = false;
-$options->allowFragments = true;
-$options->allowQueryComponents = true;
-$options->allowAuth = true;
-$options->allowNumericTld = false;
-$options->allowWildcard = false;
-$options->validateLength = true;
-$options->ignoreMaxLength = false;
+new UrlOptions(
+    requireTld: true,
+    requireProtocol: false, // expects the protocol to be present in the url
+    requireValidProtocol: true, // requires one of the protocols bellow
+    protocols: ["http", "https", "ftp"], // required protocols
+    requireHost: true,
+    requirePort: false,
+    allowUnderscores: false,
+    allowTrailingDot: false,
+    allowProtocolRelativeUrls: false,
+    allowFragments: true,
+    allowQueryComponents: true,
+    allowAuth: true,
+    allowNumericTld: false,
+    allowWildcard: false,
+    validateLength: true,
+);
 ```
 
 ## maxLength
