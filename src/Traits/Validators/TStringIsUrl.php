@@ -90,7 +90,9 @@ trait TStringIsUrl
                 return false;
             }
 
-            [$user, $password] = explode(":", $auth);
+            $auth = explode(":", $auth);
+            $user = $auth[0] ?? null;
+            $password = $auth[1] ?? null;
             if ($user === "" && $password == "") {
                 return false;
             }
