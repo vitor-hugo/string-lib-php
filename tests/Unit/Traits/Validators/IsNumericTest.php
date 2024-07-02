@@ -18,6 +18,7 @@ class IsNumericTest extends TestCase
     {
         $this->assertTrue($this->isNumeric('477303685426564879185680129761'));
         $this->assertTrue($this->isNumeric('1983'));
+        $this->assertTrue($this->isNumeric('-45'));
     }
 
 
