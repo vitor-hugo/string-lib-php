@@ -1,6 +1,3 @@
-> [!NOTE]
-> THIS PACKAGE IS UNDER DEVELOPMENT.
-
 # TString <!-- omit in toc -->
 
 Small toolset for validating and handling strings.
