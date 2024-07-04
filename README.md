@@ -22,6 +22,7 @@ Inspired on [validator.js](https://github.com/validatorjs/validator.js).
   - [IsHexadecimal](#ishexadecimal)
   - [isLength](#islength)
   - [isNumeric](#isnumeric)
+  - [isSemVer](#issemver)
   - [isUrl](#isurl)
     - [UrlOptions](#urloptions)
   - [maxLength](#maxlength)
@@ -421,6 +422,38 @@ isNumeric('R$ 999,99', true); // returns false, invalid characters
 isNumeric('2.2.0', true); // returns false
 ```
 
+## isSemVer
+
+```php
+public static function isSemVer(string $version): bool
+```
+
+<h3>Trait Namespace</h3>
+
+```php
+use Torugo\TString\Traits\Validators\TStringIsSemVer;
+```
+
+<h3>Examples</h3>
+
+```php
+// VALID
+isSemVer('0.0.4');
+isSemVer('1.2.3');
+isSemVer('10.20.30');
+isSemVer('1.0.0-alpha');
+isSemVer('1.1.0-beta');
+isSemVer('1.1.1-rc');
+isSemVer('1.1.1+72');
+
+// INVALID
+isSemVer('1');
+isSemVer('1.0');
+isSemVer('alpha.beta');
+isSemVer('v1.0.0');
+isSemVer('01.1.1');
+isSemVer('1.2.3.beta');
+```
 
 ## isUrl
 
