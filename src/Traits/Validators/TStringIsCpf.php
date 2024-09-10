@@ -17,7 +17,7 @@ trait TStringIsCpf
      * @param string $cpf CPF ID
      * @return bool
      */
-    protected static function isCpf(string $cpf): bool
+    public static function isCpf(string $cpf): bool
     {
         $cpf = preg_replace('/[^0-9]/is', '', $cpf);
 
