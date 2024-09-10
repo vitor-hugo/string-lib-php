@@ -15,7 +15,7 @@ trait TStringMinVersion
      * @param string $required Minimum required version
      * @return bool
      */
-    protected static function minVersion(string $version, string $required): bool
+    public static function minVersion(string $version, string $required): bool
     {
         $pattern = '/^[0-9\.]{1,}$/';
         if (preg_match($pattern, $version) == false || @preg_match($pattern, $required) == false) {
