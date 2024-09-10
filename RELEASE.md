@@ -1,5 +1,6 @@
 # Release History <!-- omit in toc -->
 
+- [1.2.4 (Sep 10 2024)](#124-sep-10-2024)
 - [1.2.3 (Sep 10 2024)](#123-sep-10-2024)
 - [1.2.2 (Sep 10 2024)](#122-sep-10-2024)
 - [1.2.1 (Jul 04 2024)](#121-jul-04-2024)
@@ -8,6 +9,10 @@
 - [1.1.2 (Jul 02 2024)](#112-jul-02-2024)
 - [1.1.0 (Jul 01 2024)](#110-jul-01-2024)
 - [1.0.0 (Jun 25 2024)](#100-jun-25-2024)
+
+# 1.2.4 (Sep 10 2024)
+
+Fixing collision between isCnpj and IsCpf verification digit validation.
 
 # 1.2.3 (Sep 10 2024)
 
