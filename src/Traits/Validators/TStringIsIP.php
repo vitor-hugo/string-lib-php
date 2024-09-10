@@ -11,7 +11,7 @@ trait TStringIsIP
      * @param int $version 4 or 6, if none tries both
      * @return bool
      */
-    protected static function isIP(string $ip, ?int $version = null): bool
+    public static function isIP(string $ip, ?int $version = null): bool
     {
         if ($version == null || ($version != 4 && $version != 6)) {
             return self::isIP($ip, 4) || self::isIP($ip, 6);
