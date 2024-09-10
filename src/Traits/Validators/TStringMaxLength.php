@@ -11,7 +11,7 @@ trait TStringMaxLength
      * @param int $max Maximum accpetable length. Must be >= 1.
      * @return bool
      */
-    protected function maxLength(string $str, int $max): bool
+    public function maxLength(string $str, int $max): bool
     {
         $len = mb_strlen($str);
         $max = $max < 1 ? 1 : $max;
