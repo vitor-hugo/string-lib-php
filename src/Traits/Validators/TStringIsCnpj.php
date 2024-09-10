@@ -17,7 +17,7 @@ trait TStringIsCnpj
      * @param string $cnpj CNPJ registration number
      * @return bool
      */
-    protected static function isCnpj(string $cnpj): bool
+    public static function isCnpj(string $cnpj): bool
     {
         $cnpj = preg_replace('/[^0-9]/', '', (string) $cnpj);
 
