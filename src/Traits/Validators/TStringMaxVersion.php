@@ -27,11 +27,11 @@ trait TStringMaxVersion
             return true;
         }
 
-        return self::validateVersionsParts($version, $maxVersion);
+        return self::validateMaxVersion($version, $maxVersion);
     }
 
 
-    private static function validateVersionsParts(string $version, string $maxVersion): bool
+    private static function validateMaxVersion(string $version, string $maxVersion): bool
     {
         $verNumbers = explode('.', $version);
         $reqNumbers = explode('.', $maxVersion);

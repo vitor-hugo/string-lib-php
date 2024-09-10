@@ -26,11 +26,11 @@ trait TStringMinVersion
             return true;
         }
 
-        return self::validateVersionsParts($version, $required);
+        return self::validateMinVersion($version, $required);
     }
 
 
-    private static function validateVersionsParts(string $version, string $required): bool
+    private static function validateMinVersion(string $version, string $required): bool
     {
         $verNumbers = explode('.', $version);
         $reqNumbers = explode('.', $required);
