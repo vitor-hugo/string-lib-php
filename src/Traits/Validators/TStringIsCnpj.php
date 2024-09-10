@@ -29,11 +29,11 @@ trait TStringIsCnpj
             return false;
         }
 
-        return self::verificationDigitIsValid($cnpj);
+        return self::cnpjVerificationDigitIsValid($cnpj);
     }
 
 
-    private static function verificationDigitIsValid(string $cnpj): bool
+    private static function cnpjVerificationDigitIsValid(string $cnpj): bool
     {
         // Validates first verification digit
         for ($i = 0, $j = 5, $sum = 0; $i < 12; $i++) {

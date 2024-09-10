@@ -29,11 +29,11 @@ trait TStringIsCpf
             return false;
         }
 
-        return self::verificationDigitIsValid($cpf);
+        return self::cpfVerificationDigitIsValid($cpf);
     }
 
 
-    private static function verificationDigitIsValid(string $cpf): bool
+    private static function cpfVerificationDigitIsValid(string $cpf): bool
     {
         for ($t = 9; $t < 11; $t++) {
             for ($d = 0, $c = 0; $c < $t; $c++) {
