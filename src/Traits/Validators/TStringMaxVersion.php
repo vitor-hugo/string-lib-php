@@ -16,7 +16,7 @@ trait TStringMaxVersion
      * @param string $maxVersion Maximum acceptable version
      * @return bool
      */
-    protected static function maxVersion(string $version, string $maxVersion): bool
+    public static function maxVersion(string $version, string $maxVersion): bool
     {
         $pattern = '/^[0-9\.]{1,}$/';
         if (preg_match($pattern, $version) == false || @preg_match($pattern, $maxVersion) == false) {
