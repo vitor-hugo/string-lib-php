@@ -14,7 +14,7 @@ trait TStringIsLength
      * @param int $max Maximum accpetable length. Must be >= 1.
      * @return bool
      */
-    protected function isLength(string $str, int $min, int $max): bool
+    public function isLength(string $str, int $min, int $max): bool
     {
         $len = mb_strlen($str);
 
