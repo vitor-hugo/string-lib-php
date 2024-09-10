@@ -11,7 +11,7 @@ trait TStringMinLength
      * @param int $min Minimum acceptable length. Must be >= 0.
      * @return bool
      */
-    protected function minLength(string $str, int $min): bool
+    public function minLength(string $str, int $min): bool
     {
         $len = mb_strlen($str);
         $min = $min < 1 ? 1 : $min;
